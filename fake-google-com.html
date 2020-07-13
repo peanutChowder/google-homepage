@@ -1,0 +1,167 @@
+<!-- Just for practice
+Tried to recreate the google homepage visually, disregarding
+functionality. Not meant to be an exact replica.-->
+<!DOCTYPE html>
+<style>
+    body {
+        width: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;  
+    }
+    #search-bar:focus {
+        outline-style: none;
+        box-shadow: var(--selected);
+    }
+    .buttons:focus {
+        box-shadow: 0 0 0 1px rgb(118, 191, 224);
+    }
+    input:hover, .buttons:hover {
+        box-shadow: var(--selected)
+    }
+    :root {
+        --light-colour: rgba(0, 0, 0, 0.055);
+        --darker-colour: rgba(0, 0, 0, 0.1);
+        --text-colour: rgb(0, 0, 0, 0.6);
+
+        --footer-size: 40px;
+
+        --selected: 0 1px 6px 0 rgba(32,33,36,0.28);
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+
+    }
+    .header:hover, .footer-link:hover{
+        border-bottom: solid;
+        border-bottom-width: 1px;
+    }
+    .header {
+        color: var(--text-colour);
+        position: absolute;
+        font-size: 14px;
+        top: 20px;
+        text-decoration: none;
+    }
+    #about {
+        left: 20px;
+    }
+    #store {
+        left: 70px;
+    }
+    .footer {
+        background-color: var(--light-colour);
+        width: 100%;
+        height: var(--footer-size);
+        position: absolute;
+        border-top: 1px solid var(--darker-colour);
+
+
+    }
+    #content {
+        display: block;
+        text-align: center;
+        margin-top: 5%;
+
+    }
+    #google-logo {
+        position: relative;
+        top: 30px;
+        height: 230px;
+        width: 300px;
+    }
+    #search-area {
+        position: relative;
+        height: 44px;
+        max-width: 500px;
+        position: relative;
+        border-radius: 22px;
+        width: 100%;
+    }
+    #search-bar {
+        background-color: rgb(0, 0, 0, 0);
+        border-style: solid;
+        border-width: 1px;
+        border-color: var(--darker-colour);
+        color: var(--text-colour);
+        width: 100%;
+        height: 100%;
+        border-radius: 22px;
+        font-size: 20px;
+        padding-left: 10%;
+        text-align: left;
+
+        position: absolute;
+    }
+    #search-icon {
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        left: 20px;
+        top: 12px;
+    }
+    .buttons {
+        text-decoration: none;
+        background-color: var(--light-colour);
+        display: inline-block;
+        margin-top: 30px;
+        
+        padding: 10px 20px;
+        border-radius: 7px;
+        border-style: none;
+        color: var(--text-colour);
+    }
+    .footer-text {
+        color: var(--text-colour);
+        font-size: 14px;
+        margin-left: 30px;
+        text-decoration: none;
+    }
+    #footer1 {
+        bottom: var(--footer-size);
+        text-align: left;
+    }
+    #location {
+        line-height: 38px;
+        font-family: Arial, Helvetica, sans-serif;    
+    }
+    #footer2 {
+        display: flex;
+        align-items: center;
+        bottom: 0;
+    }
+
+</style>
+<html>
+    <head>
+        <title>Google Replica</title>
+    </head>
+    <body>
+        <div id="content">
+            <a id="about" class="header" href="https://about.google/">About</a>
+            <a id="store" class="header" href="https://store.google.com/">Store</a>
+            <image src="https://cdn.vox-cdn.com/thumbor/HqBAiwc9uD1sHBw2Uvac03pCXKE=/0x0:2012x1341/1400x1050/filters:focal(0x0:2012x1341):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg" 
+            alt="Google" id="google-logo" class="center"></image>
+            <div id="search-area" class="center">
+                <span id="search-icon">
+                    <svg style="width: 100%; height: 100%">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                    </svg>
+                </span>
+                <input title="Search" maxlength="2048" id="search-bar" type="text" class="center">         
+            </div>
+            <a id="search-submit" class="buttons" href="https://www.google.com/">Google Search</a>
+            <a id="feeling-lucky" class="buttons" href="https://www.google.com/doodles/">I'm feeling lucky</a>
+        </div>
+        <div id="footer1" class="footer">
+            <div id="location" class="footer-text">Canada</div>
+        </div>
+        <div id="footer2" class="footer">
+            <a id="advertising" class="footer-text footer-link" href="https://ads.google.com/">Advertising</a>
+            <a id="business" class="footer-text footer-link" href="http://google.com/services">Business</a>
+            <a id="how-search-works" class="footer-text footer-link" href="https://www.google.com/search/howsearchworks">How Search Works</a>
+        </div>
+    </body>
+</html>
